@@ -10,11 +10,17 @@ import {
   MatOptionModule,
   MatSelectModule
 } from "@angular/material";
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import {
+  FormsModule,
+  // FormGroupDirective,
+  // FormControl,
+  // NgForm,
+  // Validators
+} from "@angular/forms";
+// import { ErrorStateMatcher } from "@angular/material/core";
 import { CommonModule } from "@angular/common";
 // This Module's Components
-import { SharedFolderComponent } from "./shared-folder.component";
+// import { SharedFolderComponent } from "./shared-folder.component";
 
 @NgModule({
   imports: [
@@ -26,11 +32,15 @@ import { SharedFolderComponent } from "./shared-folder.component";
     MatInputModule,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule,
+    // FormGroupDirective,
+    // FormControl,
+    // NgForm,
     MatOptionModule,
-    MatSelectModule
+    MatSelectModule,
+    // Validators,
+    // ErrorStateMatcher
   ],
-  declarations: [SharedFolderComponent],
+  declarations: [],
   exports: [
     BrowserAnimationsModule,
     MatButtonModule,
@@ -40,9 +50,13 @@ import { SharedFolderComponent } from "./shared-folder.component";
     MatInputModule,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule,
+    // FormGroupDirective,
+    // FormControl,
+    // NgForm,
     MatOptionModule,
-    MatSelectModule
+    MatSelectModule,
+    // Validators,
+    // ErrorStateMatcher
   ]
 })
 export class SharedModule {}

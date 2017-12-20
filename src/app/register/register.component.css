@@ -1,1 +1,33 @@
  /* component css goes here */
+ 
+ .login-logo {
+     bottom: -89px;
+ }
+ 
+ .regisetr-box {
+     border: 1px;
+     border-style: groove;
+     padding: 32px;
+     width: 420px;
+     left: 9%;
+     bottom: -123px;
+ }
+ 
+ .register-title {
+     padding-left: 31%;
+ }
+ 
+ .register-form {
+     padding-left: 8%;
+     padding-top: 23px;
+     margin-top: -12px;
+ }
+ 
+ .btn-color {
+     background-color: #2187e1;
+     color: white;
+ }
+ 
+ .row1 {
+     right: 43px;
+ }

@@ -1,1 +1,106 @@
 <!--component html goes here -->
+<div class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 login-logo">
+                <h2>Contacts</h2>
+                <img src="../assets/images/main_logo.png" alt="Contacts Logo" width="280px;">
+            </div>
+            <div class="col-md-6 regisetr-box">
+                <h2 class="register-title">Register</h2>
+                <form #registerForm="ngForm" (ngSubmit)="registerForm.valid && onRegister(registerForm.value)" novalidate>
+                    <div class="1register-form">
+                        <div class="col-md-12">
+                            <div class="col-md-6 row1">
+                                <mat-form-field>
+                                    <input matInput #firstref="ngModel" name="first_name" placeholder="First Name" type="text" [(ngModel)]="first_name" required>
+                                    <mat-error *ngIf="firstref.hasError('required')">
+                                        First Name is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput #lastref="ngModel" name="last_name" placeholder="Last Name" type="text" [(ngModel)]="last_name" required>
+                                    <mat-error *ngIf="lastref.hasError('required')">
+                                        Last Name is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-6 row1">
+                                <mat-form-field>
+                                    <input matInput #emailref="ngModel" name="email" placeholder="Email Id" type="text" [(ngModel)]="email" email required>
+                                    <mat-error *ngIf="emailref.hasError('email') && !emailref.hasError('required')">
+                                        Please enter a valid email address
+                                    </mat-error>
+                                    <mat-error *ngIf="emailref.hasError('required')">
+                                        Email Id is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput #mobileref="ngModel" name="mobile" pattern="^[\w\s-]+$" placeholder="Mobile" type="text" [(ngModel)]="mobile" required>
+                                    <!-- <mat-error *ngIf="mobileref.hasError('pattern') && !mobileref.hasError('required')">
+                                        Not valid mobile number
+                                    </mat-error> -->
+                                    <mat-error *ngIf="mobileref.hasError('required')">
+                                        Mobile no. is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-md-12" ngModelGroup="address">
+                            <div class="col-md-6 row1">
+                                <mat-form-field>
+                                    <input matInput #cityref="ngModel" name="city" placeholder="City" type="text" [(ngModel)]="city" required>
+                                    <mat-error *ngIf="cityref.hasError('required')">
+                                        City is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput #pincoderef="ngModel" name="pincode" placeholder="pincode" type="text" [(ngModel)]="pincode" required>
+                                    <mat-error *ngIf="pincoderef.hasError('required')">
+                                        Pincode is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-6 row1">
+                                <mat-form-field>
+                                    <input matInput #passwordref="ngModel" name="password" placeholder="Password" type="password" [(ngModel)]="password" required>
+                                    <mat-error *ngIf="passwordref.hasError('required')">
+                                        Password is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput #confirmpassref="ngModel" name="confirm_password" placeholder="Confirm Password" type="password" [(ngModel)]="confirm_password" required>
+                                    <mat-error *ngIf="confirmpassref.hasError('required')">
+                                        Confirm Password is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <!-- <div class="col-md-2"></div> -->
+                            <div class="col-md-6" style="padding:20px;">
+                                <button mat-button class="btn btn-primary btn-color">Register</button>
+                            </div>
+                            <div class="col-md-6" style="padding:28px;">
+                                <a (click)="onbackClick()">Back to Login</a>
+                            </div>
+                            <!-- <div class="col-md-4"></div> -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

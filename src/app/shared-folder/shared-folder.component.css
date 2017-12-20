@@ -1,1 +1,10 @@
- /* component css goes here */
+/* component css goes here */
+
+.nav-color {
+    background: #2693ea;
+    color: white;
+}
+
+.text-color {
+    color: white;
+}
