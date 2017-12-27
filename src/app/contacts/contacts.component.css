@@ -7,4 +7,7 @@
  
  .table-style {
      margin-top: 23px;
+     /* margin-bottom: 90px; */
+     height: 450px;
+     overflow-y: auto;
  }

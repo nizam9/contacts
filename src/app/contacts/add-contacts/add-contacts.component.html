@@ -1,0 +1,45 @@
+<!--component html goes here -->
+<h2 mat-dialog-title class="dialog-title">Add Contacts</h2>
+<mat-dialog-content style="margin-top: 65px;">
+    <form #addContactForm="ngForm" (ngSubmit)="addContactForm.valid && onAddContact(addContactForm.value)">
+        <div class="login-form">
+            <div class="col-md-12 ">
+                <div class="col-md-4 ">
+                    <mat-form-field>
+                        <input matInput #nameref="ngModel" name="name" placeholder="Name" type="name" [(ngModel)]="name" required>
+                        <mat-error *ngIf="nameref.hasError('required')">
+                            Name is required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field>
+                        <input matInput #mobileref="ngModel" name="mobile" placeholder="Mobile No" type="number" [(ngModel)]="mobile" required>
+                        <mat-error *ngIf="mobileref.hasError('required')">
+                            Mobile no. is required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field>
+                        <input matInput #emailref="ngModel" name="email" placeholder="Email Id" type="email" [(ngModel)]="email" email required>
+                        <mat-error *ngIf="emailref.hasError('required')">
+                            Email id is required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-12" style="padding-top: 60px;">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <!-- <mat-dialog-actions> -->
+                    <button mat-button>Add</button>
+                    <button mat-button [mat-dialog-close]="true">Cancel</button>
+                    <!-- </mat-dialog-actions> -->
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </form>
+</mat-dialog-content>

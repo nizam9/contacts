@@ -1,15 +1,15 @@
 <div class="button-position">
-    <button type="button" class="btn btn-primary">Add Contacts</button>
+    <button type="button" class="btn btn-primary" (click)="addConatct()">Add Contacts</button>
 </div>
-<div class="container table-style" style="margin-bottom: 90px;">
+<div class="container table-style">
     <table class="table table-bordered ">
         <thead>
             <tr>
-                <td>Sno.</td>
-                <td>Name</td>
-                <td>Number</td>
-                <td>Email</td>
-                <td>Actions</td>
+                <th>Sno.</th>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Email</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -18,7 +18,10 @@
                 <td>Nizam</td>
                 <td>8985977465</td>
                 <td>nizam@gmail.com</td>
-                <td>Edit</td>
+                <td>
+                    <span href="" class="material-icons" matTooltip="Edit" [matTooltipPosition]="position">edit</span>
+                    <span href="" class="material-icons" matTooltip="Delete" [matTooltipPosition]="position">delete</span>
+                </td>
             </tr>
             <tr>
                 <td>2</td>
